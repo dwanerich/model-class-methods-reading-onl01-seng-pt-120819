@@ -2545,3 +2545,13 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 57ms (Views: 51.2ms | ActiveRecord: 3.3ms)
 
 
+Started GET "/authors/14" for ::1 at 2020-05-23 11:30:32 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAuthor Load (2.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 14]]
+  Rendered authors/show.html.erb within layouts/application (181.4ms)
+Completed 200 OK in 284ms (Views: 256.7ms | ActiveRecord: 3.5ms)
+
+
